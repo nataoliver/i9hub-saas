@@ -1,0 +1,20 @@
+i9Hub v1.2.4 — Arquitetura e licenciamento
+
+ATUALIZAÇÃO SEGURA
+1. No i9Hub atual, abra Configurações > Dados e exporte um backup.
+2. Extraia o arquivo i9Hub-v1.2.4.zip para uma pasta temporária.
+3. Abra chrome://extensions e localize o i9Hub.
+4. Atualize os arquivos na mesma pasta da extensão existente, mantendo a identidade da extensão. Não desinstale a extensão.
+5. Clique em Recarregar na página de extensões.
+6. Atualize a aba do WhatsApp Web e abra o painel do i9Hub.
+
+O QUE MUDA
+- Fundação de arquitetura e licenciamento v2.
+- Catálogo modular e dependências centralizadas.
+- Operações comerciais exigem licença válida emitida pelo painel.
+- Recursos futuros da v1.3.0 aparecem como planejados e permanecem bloqueados.
+
+IMPORTANTE
+- O painel/backend precisa seguir docs/CONTRATO_PAINEL_LICENCAS_v1.2.4.md.
+- Faça primeiro os testes de licença descritos em GUIA_TESTE_v1.2.4.md.
+- Não desinstale a extensão para atualizar, pois isso pode apagar dados locais.

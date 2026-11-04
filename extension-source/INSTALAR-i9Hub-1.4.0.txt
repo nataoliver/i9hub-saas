@@ -1,0 +1,14 @@
+i9Hub v1.4.0 — instalação para homologação da Fase 08
+
+1. Faça backup da extensão atual.
+2. Extraia i9Hub-v1.4.0.zip em uma pasta nova.
+3. Abra chrome://extensions.
+4. Ative Modo do desenvolvedor.
+5. Clique em Carregar sem compactação e selecione a pasta extraída que contém manifest.json.
+6. Ative uma licença com o entitlement dashboard.commercial_agenda e dependências descritas em docs/INTEGRACAO_PAINEL_v1.4.0.md.
+7. Conecte o Google Agenda em Configurações → Google Agenda.
+8. Homologue com leads, compromissos e follow-ups de teste.
+9. Teste o registro de reunião realizada e não comparecimento após o horário final.
+
+A central exibe eventos vinculados aos leads do CRM; não lista todos os eventos externos da conta Google.
+Mantenha a instalação anterior até concluir a homologação.

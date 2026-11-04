@@ -1,0 +1,20 @@
+i9Hub 1.1.4 — Lead Score e qualificação inteligente
+
+INSTALAÇÃO SEGURA
+1. Faça uma cópia de segurança da pasta atual da extensão.
+2. Extraia i9Hub-v1.1.4.zip para uma pasta temporária.
+3. Copie os arquivos extraídos para a pasta atual da extensão, substituindo os arquivos antigos.
+4. Abra chrome://extensions e clique em Recarregar no i9Hub.
+5. Atualize o WhatsApp Web com F5 e abra o painel lateral novamente.
+
+Importante: não desinstale a extensão para atualizar. Preservar a instalação existente ajuda a manter a identidade e os dados locais.
+
+COMO USAR O LEAD SCORE
+1. Abra CRM Leads.
+2. Clique em “Lead Score e qualificação”.
+3. Ajuste os pesos das ações, a pontuação mínima e os critérios de qualificação.
+4. Clique em “Salvar critérios”. A pontuação dos leads será recalculada.
+5. Use os filtros “Qualificação” e “Nichos/subnichos” para localizar os contatos desejados.
+6. Para montar uma campanha só com qualificados, filtre “Qualificados” e clique em “Campanha WhatsApp”.
+
+O orçamento mínimo inicial é R$ 1.000/mês. Ele pode ser alterado, e a regra que exige orçamento mínimo está desativada por padrão.

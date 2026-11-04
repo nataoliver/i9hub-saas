@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i9Hub SaaS</title>
+  <link rel="stylesheet" href="sidepanel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/png" href="../icons/icon-32.png">
+
+
+
+</head>
+<body data-theme="light">
+<div id="app">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="/icons/icon-32.png" alt="i9Hub" class="logo-icon">
+      <h1 class="logo-text">i9Hub</h1>
+      <span class="version-badge" id="version-badge">v1.0.0</span>
+    </div>
+    <nav class="sidebar-nav" id="sidebar-nav">
+      <!-- Populated by JS -->
+    </nav>
+    <div class="sidebar-footer">
+      <div class="license-status" id="license-status">
+        <span class="status-indicator" id="status-indicator"></span>
+        <div class="license-info">
+        <span class="license-plan" id="license-plan">CARREGANDO...</span>
+        <span class="license-usage" id="license-usage">Verificando tenant...</span>
+        </div>
+      </div>
+      <button class="btn btn-sm btn-secondary" id="logout-btn" title="Sair da plataforma">Sair</button>
+    </div>
+  </aside>
+
+  <main class="main-content" id="main-content">
+    <div id="view-content"><!-- Views injected by router --></div>
+    <div id="footer-ad-slot" class="footer-ad-slot" aria-live="polite" hidden></div>
+  </main>
+
+  <!-- v7.0.5: painel de estado/ações do WhatsApp (iframe só se ligado em Configurações). Ver components/WhatsAppDock.js -->
+  <aside class="wa-dock" id="wa-dock" aria-label="WhatsApp Web" hidden></aside>
+
+</div>
+  <!-- Aba lateral para reabrir o painel do WhatsApp quando recolhido -->
+  <button type="button" class="wa-handle" id="wa-handle" title="Abrir o painel do WhatsApp" hidden>WhatsApp</button>
+
+  <div id="admin-notification-layer" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Modals Container -->
+  <div class="modal-overlay" id="modal-overlay"></div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script type="module" src="./sidepanel.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+i9Hub v1.0.0 — Fase 06: Google Agenda
+
+1. Faça backup da extensão atual.
+2. Extraia i9Hub-v1.0.0.zip para uma pasta.
+3. Abra chrome://extensions.
+4. Ative o Modo do desenvolvedor.
+5. Clique em Carregar sem compactação e selecione a pasta que contém manifest.json; se a extensão já estiver instalada da mesma pasta, clique em Recarregar.
+6. Abra Configurações > Google Agenda e conecte sua conta.
+7. Se necessário, habilite Google Calendar API e autorize os escopos descritos em docs/GOOGLE_CALENDAR_SETUP.md.
+
+Não desinstale a versão anterior para preservar dados locais. O ID da extensão foi preservado.
+
+Para enviar confirmação pelo WhatsApp, o WhatsApp Web precisa estar conectado e o contato deve ter consentimento válido. A mensagem é enviada pela extensão local, não pela API oficial.

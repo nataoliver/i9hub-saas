@@ -1,0 +1,23 @@
+i9Hub v1.2.2 — Fase 5: Monitoramento da IA
+
+INSTALAÇÃO SEGURA
+1. No i9Hub atual, abra Configurações > Dados e exporte um backup.
+2. Extraia o ZIP para uma pasta.
+3. Abra chrome://extensions.
+4. Atualize os arquivos da pasta da extensão existente, mantendo a mesma pasta e a mesma identidade da extensão.
+5. Clique em Recarregar na página de extensões.
+6. Não desinstale a extensão antiga antes de confirmar o backup.
+7. Recarregue a aba do WhatsApp Web e abra o painel lateral do i9Hub.
+
+TESTE INICIAL
+- Abra Execução > Central de Execução.
+- Confira os estados da IA, do WhatsApp e das campanhas, além das filas de entrada, histórico e sincronização.
+- Envie uma mensagem de teste autorizada e confirme o evento em Atividade recente da IA.
+- Confira Desempenho por personalidade e Erros e respostas pendentes.
+- Teste um perfil de networking e um comercial para confirmar que apenas o perfil comercial conta qualificação comercial.
+
+OBSERVAÇÕES
+- O monitor guarda até 500 eventos recentes localmente; não sincroniza esse histórico entre computadores nesta fase.
+- Os eventos não incluem o texto bruto das mensagens nem números de telefone, mas podem exibir o nome da conversa para facilitar diagnóstico.
+- Resposta confirmada não significa que o destinatário leu a mensagem.
+- `npm run validate` passou com 221 testes automatizados; ainda é necessário validar no Chrome e WhatsApp Web reais.

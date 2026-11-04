@@ -1,0 +1,19 @@
+i9Hub 1.1.5 — Fase 3: Relatórios de campanha
+
+ATUALIZAÇÃO SEGURA DA INSTALAÇÃO EXISTENTE
+1. Antes de atualizar, faça backup da pasta atual da extensão e confirme que o backup do Google Drive está sincronizado.
+2. Extraia i9Hub-v1.1.5.zip para uma pasta temporária.
+3. Copie o conteúdo extraído para a mesma pasta onde a versão anterior do i9Hub está instalada, substituindo os arquivos antigos. Mantenha o arquivo manifest.json e a chave do manifesto incluídos no pacote.
+4. Não remova a extensão em chrome://extensions para atualizar: isso pode apagar o armazenamento local vinculado à extensão.
+5. Abra chrome://extensions e clique em Recarregar no i9Hub.
+6. Recarregue a aba do WhatsApp Web e abra o painel lateral i9Hub.
+
+PRIMEIRO USO DOS RELATÓRIOS
+1. Entre em Campanhas WhatsApp e clique em Relatório na campanha desejada.
+2. Use Atualizar agora para recalcular as métricas com os dados atuais do CRM.
+3. Depois de 24 ou 48 horas da conclusão, use Registrar marco 24h/48h caso precise capturar manualmente. O i9Hub também programa snapshots agregados automáticos nesses prazos.
+4. Para gerar PDF, clique em Exportar PDF e, na janela de impressão do Chrome, escolha Salvar como PDF.
+
+O relatório mostra respostas identificadas a partir das evidências sincronizadas no CRM. Para melhorar a precisão, sincronize as conversas do WhatsApp antes de atualizar o relatório. Contatos sem dados suficientes aparecem em uma seção separada.
+
+Os snapshots automáticos não forçam a leitura do WhatsApp quando o navegador está fechado; o agendamento é retomado quando o Chrome volta a executar a extensão.

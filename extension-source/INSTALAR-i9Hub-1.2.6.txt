@@ -1,0 +1,16 @@
+i9Hub v1.2.6 — Instalação para homologação
+
+1. Faça backup da pasta da extensão atualmente instalada.
+2. Extraia o ZIP em uma pasta de trabalho.
+3. Copie os arquivos atualizados para a pasta já utilizada pela extensão, preservando o ID da extensão e os dados do perfil Chrome.
+4. Não apague os dados do Chrome nem remova a extensão antiga durante a atualização.
+5. Abra chrome://extensions.
+6. Ative o Modo do desenvolvedor, se necessário.
+7. Clique em Recarregar no cartão do i9Hub.
+8. Atualize a aba do WhatsApp Web e reabra o painel.
+
+Para testar o Histórico do CRM, utilize uma licença com crm.leads e crm.notes ou a licença administrativa integral.
+
+Se o painel ainda não reconhecer crm.notes, isso será resolvido na etapa posterior de atualização do painel. Nesta fase, o painel administrativo não foi alterado.
+
+Consulte GUIA_TESTE_v1.2.6.md para a homologação completa.

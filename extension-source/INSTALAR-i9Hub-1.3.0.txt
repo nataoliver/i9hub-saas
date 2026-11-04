@@ -1,0 +1,14 @@
+i9Hub v1.3.0 — instalação para homologação
+
+1. Faça backup da pasta da extensão atual.
+2. Extraia i9Hub-v1.3.0.zip em uma pasta nova.
+3. Abra chrome://extensions.
+4. Ative Modo do desenvolvedor.
+5. Clique em Carregar sem compactação e selecione a pasta extraída que contém manifest.json.
+6. Ative/valide uma licença com os entitlements de CRM, Google Agenda e google.calendar.automation.
+7. Em Configurações → Google Agenda, conecte uma conta Google com permissão de edição.
+8. Crie primeiro uma regra de teste sem confirmação automática por WhatsApp.
+9. Homologue com um lead e uma agenda de teste.
+
+Não remova a instalação anterior até concluir a homologação.
+As regras de automação são locais ao perfil Chrome deste computador nesta versão.

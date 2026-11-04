@@ -1,0 +1,21 @@
+i9Hub v1.2.1 — Fase 4: Inteligência comercial e otimização
+
+INSTALAÇÃO
+1. No i9Hub atual, abra Configurações > Dados e exporte um backup.
+2. Extraia o arquivo ZIP para uma pasta.
+3. Abra chrome://extensions.
+4. Localize a extensão i9Hub carregada em modo de desenvolvedor e use o botão de recarregar apontando para a pasta atualizada, ou atualize os arquivos da pasta de desenvolvimento mantendo a mesma pasta e clique em Recarregar.
+5. Não remova a extensão existente antes de confirmar o backup, para evitar perda de dados locais.
+6. Abra o WhatsApp Web, depois abra o painel lateral do i9Hub.
+
+TESTE INICIAL
+- CRM > Inteligência comercial > Atualizar análise.
+- Compare nichos, subnichos e personalidades da IA.
+- Exporte a análise CSV e confira no Excel.
+- Use Preparar público para confirmar que contatos sem telefone, Black list, spam e descadastro são excluídos.
+- Teste primeiro com um público pequeno e autorizado. Preparar público não dispara campanha automaticamente.
+
+IMPORTANTE
+- As taxas dependem de relatórios e conversas sincronizados.
+- Comparação por personalidade não prova causalidade; o público, a mensagem e o horário também influenciam.
+- Chaves API, ativação da IA e permissões da licença continuam sendo controladas pelas configurações existentes.

@@ -1,0 +1,17 @@
+i9Hub v1.2.3 — Instalação segura
+
+1. Faça um backup do i9Hub em Configurações > Dados > Exportar Backup e confirme o estado do Google Drive.
+2. Baixe e extraia o ZIP `i9Hub-v1.2.3.zip` para uma pasta temporária.
+3. Abra `chrome://extensions` e localize o i9Hub.
+4. Atualize os arquivos na mesma pasta da extensão existente, substituindo os arquivos antigos. Não desinstale a extensão.
+5. Clique em Recarregar na página de extensões.
+6. Atualize a aba do WhatsApp Web com F5 e abra o painel do i9Hub.
+7. Entre em Chat com IA e depois em Execução > Central de Execução.
+8. Teste primeiro uma conversa autorizada e confirme que a personalidade correta responde e que os indicadores da fila atualizam.
+
+Notas importantes
+- A fila de entrada é local ao perfil do Chrome; ela não é sincronizada pelo Google Drive.
+- Se o Chrome/service worker reiniciar durante o processamento de uma mensagem, o item será marcado para revisão manual. O i9Hub não repete automaticamente um envio incerto para evitar duplicação. Confira a conversa no WhatsApp Web.
+- A memória estruturada profissional pode sincronizar com o Google Drive como parte das preferências da IA. Ela não contém transcrição bruta nem telefone no mapa de memória.
+- Se ocorrer erro de envio ou resposta não confirmada, revise o histórico antes de tentar novamente.
+- A validação automatizada não substitui o teste manual com WhatsApp Web e Google Drive reais.

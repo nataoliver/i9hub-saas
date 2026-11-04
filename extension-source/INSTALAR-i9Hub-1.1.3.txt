@@ -1,0 +1,23 @@
+i9Hub 1.1.3 — Gestão segura de campanhas
+
+ATUALIZAÇÃO PRESERVANDO OS DADOS LOCAIS
+1. Faça uma cópia da pasta atual da extensão.
+2. Extraia i9Hub-v1.1.3.zip para uma pasta nova.
+3. Abra chrome://extensions e localize o i9Hub.
+4. Para atualizar a pasta existente, substitua os arquivos pela nova versão preservando o perfil da extensão. Se carregar uma pasta nova, use “Carregar sem compactação” e selecione a pasta que contém manifest.json.
+5. Clique em Recarregar na extensão.
+6. Atualize a aba do WhatsApp Web com F5 e abra o painel lateral do i9Hub.
+7. Em Campanhas WhatsApp, use “Editar” para alterar uma campanha. Se ela estiver em execução, o i9Hub solicitará uma pausa e aguardará confirmação antes de abrir o editor.
+
+NOVIDADES
+- Edite campanhas em rascunho ou pausadas e altere uma campanha em andamento após pausa segura.
+- Ajuste mensagem dos próximos envios, intervalos, tamanho dos lotes, pausa entre lotes, limite total de envios, horário e estágio após envio.
+- O limite total aceita 0 para todos os contatos. Se o limite for atingido, o painel mostra os contatos pendentes e permite aumentar o limite ou retomar.
+- Histórico de alterações de configuração e versões preservado no registro da campanha.
+- As mudanças se aplicam somente aos contatos pendentes; mensagens já enviadas não são alteradas.
+
+IMPORTANTE
+- Não desinstale a extensão para atualizar: a desinstalação pode apagar dados locais.
+- Mantenha o Chrome e o WhatsApp Web conectados durante as campanhas.
+- Se a pausa segura não for confirmada, a edição não será aplicada. Confira a conexão do WhatsApp Web e tente novamente.
+- Respeite o consentimento dos contatos, pedidos de descadastro e as políticas aplicáveis do WhatsApp.

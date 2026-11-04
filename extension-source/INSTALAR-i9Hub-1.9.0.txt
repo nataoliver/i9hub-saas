@@ -1,0 +1,40 @@
+i9Hub v1.9.0 — Fase 13: Comunicação Inteligente e Atendimento pelo CRM
+
+ATUALIZAÇÃO SEGURA
+1. Faça um backup em Configurações > Dados > Exportar Backup.
+2. Extraia i9Hub-v1.9.0.zip para uma pasta temporária.
+3. Abra chrome://extensions e mantenha o Modo do desenvolvedor ativado.
+4. Atualize os arquivos da pasta da extensão existente, substituindo os arquivos antigos.
+5. Clique em Recarregar na extensão i9Hub.
+6. NÃO clique em Remover e não desinstale a extensão. Preserve a mesma pasta/identidade para manter os dados locais.
+7. Recarregue a aba do WhatsApp Web e abra o painel i9Hub.
+
+NOVIDADES
+- Botão WhatsApp nos cards Tabela e Kanban e no detalhe do lead: abre a conversa do número cadastrado.
+- Botão E-mail nos cards e no detalhe: abre o editor dentro do CRM.
+- Conexão Gmail via OAuth do Chrome e envio pela Gmail API.
+- Modelos padrão e modelos personalizados de e-mail.
+- Histórico registra conversa aberta e resultado de e-mail sem armazenar o corpo da mensagem.
+
+CONFIGURAÇÃO DO GMAIL
+- O projeto Google Cloud do OAuth Client ID precisa ter Gmail API habilitada.
+- Configure o escopo https://www.googleapis.com/auth/gmail.send na tela de consentimento OAuth.
+- No CRM, abra um lead e clique no botão de e-mail > Conectar Gmail.
+- Autorize a permissão solicitada pelo Chrome e a conta Google.
+- Faça primeiro um envio para um endereço interno de teste.
+- A extensão não lê a caixa de entrada. Nesta fase o escopo é somente envio.
+
+LICENCIAMENTO
+- Catálogo da extensão: v13 (89 IDs, 88 implementados).
+- Novo entitlement: crm.communication.email.
+- E-mail exige crm.leads + crm.communication.email.
+- Abrir WhatsApp exige crm.leads + whatsapp.connection.
+- O painel administrativo/backend ainda precisa receber o catálogo v13 para liberar o novo entitlement nos planos comerciais. admin.full_access mantém acesso.
+
+IMPORTANTE
+- Não há envio automático de mensagem WhatsApp; o botão apenas abre a conversa.
+- Antes de enviar e-mail, o operador precisa confirmar que o contato pode receber a mensagem.
+- Leads com emailOptedOut=true ou emailConsentStatus='opted_out' são bloqueados.
+- Em caso de envio sem confirmação por falha de rede, confira a pasta Enviados antes de tentar novamente.
+- Anexos, Outlook/Microsoft 365 e sincronização de respostas recebidas ainda não estão disponíveis.
+- Consulte GUIA_HOMOLOGACAO_FASE_13_v1.9.0.md antes de usar em produção.

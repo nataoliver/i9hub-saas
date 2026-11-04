@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i9Leads Flow - Configurações</title>
+  <style>
+    :root {
+      --primary: #1976d2;
+      --primary-hover: #1565c0;
+      --danger: #d32f2f;
+      --danger-hover: #b71c1c;
+      --success: #2e7d32;
+      --bg: #f4f6f8;
+      --card-bg: #ffffff;
+      --text: #1a202c;
+      --text-muted: #718096;
+      --border: #e2e8f0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    body {
+      max-width: 580px;
+      margin: 32px auto;
+      padding: 24px;
+      background-color: var(--bg);
+      color: var(--text);
+      font-size: 14px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    header img {
+      width: 36px;
+      height: 36px;
+    }
+    header h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0d47a1;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: #2d3748;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px dashed #edf2f7;
+    }
+    .info-row:last-child {
+      border-bottom: none;
+    }
+    .info-label {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .info-val {
+      font-weight: 600;
+      word-break: break-all;
+    }
+    .actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .btn {
+      padding: 9px 16px;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+    }
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+    .btn-danger {
+      background: #fee2e2;
+      color: var(--danger);
+      border: 1px solid #fca5a5;
+    }
+    .btn-danger:hover {
+      background: var(--danger);
+      color: #ffffff;
+    }
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    #msg-box {
+      margin-top: 14px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../icons/icon-48.png" alt="i9Leads Flow">
+    <h1>i9Leads Flow <span id="hdr-version" style="font-size:13px;font-weight:600;color:#718096">v5.4.0</span> - Configurações e Licenciamento</h1>
+  </header>
+
+  <div class="card">
+    <div class="card-title">Status da Licença</div>
+    <div id="license-info">Carregando informações da licença...</div>
+    <div class="actions">
+      <button id="validate-btn" class="btn btn-primary">Ativar minha conta</button>
+      <button id="deactivate-btn" class="btn btn-danger">Desativar Licença</button>
+    </div>
+    <div id="msg-box"></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Informações do Dispositivo e Extensão</div>
+    <div class="info-row">
+      <span class="info-label">Versão da Extensão:</span>
+      <span class="info-val" id="ext-version">-</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Device ID:</span>
+      <span class="info-val" id="device-id">-</span>
+    </div>
+  </div>
+
+  <p class="credit" style="margin-top:10px;text-align:center;font-size:11px;color:#6c757d">Desenvolvido por <strong>Natã Oliver</strong> · <a href="https://i9ads.com.br/?utm_source=i9leads_flow&amp;utm_medium=extensao_chrome&amp;utm_campaign=origem_extensao&amp;utm_content=opcoes" target="_blank" rel="noopener noreferrer" style="color:#1976d2;font-weight:600;text-decoration:none">i9ads.com.br</a></p>
+<script type="module" src="./options.js"></script>
+</body>
+</html>

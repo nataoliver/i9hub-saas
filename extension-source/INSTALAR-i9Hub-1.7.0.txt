@@ -1,0 +1,25 @@
+i9Hub v1.7.0 — instalação e homologação da Fase 11
+
+1. Faça backup da pasta atual da extensão.
+2. Extraia i9Hub-v1.7.0.zip em uma pasta temporária.
+3. Copie o conteúdo extraído para a pasta que já está carregada no Chrome, substituindo os arquivos antigos.
+4. NÃO remova a extensão pelo chrome://extensions. Preserve o mesmo ID para manter os dados locais.
+5. Abra chrome://extensions e clique em Recarregar.
+6. Confira se a versão exibida é 1.7.0.
+7. Abra Dashboard → Inteligência gerencial.
+8. Confira projeção, metas, oportunidades paradas, vendedores, nichos e produtos.
+9. Para o parecer de IA, configure e teste a chave em Configurações → Atendimento IA e clique em Gerar análise com IA.
+10. Verifique o consumo no painel do provedor de IA.
+
+Licenciamento:
+- Ações protegidas por dashboard.management_intelligence, dashboard.commercial_performance (dependência legada), crm.leads e crm.kanban.
+- dashboard.management_intelligence é o entitlement dedicado; tokens antigos com dashboard.commercial_performance permanecem compatíveis.
+- O painel administrativo não foi alterado nesta fase.
+
+Privacidade:
+- A chamada de IA envia apenas indicadores agregados e aliases.
+- Não envia nomes, telefones, e-mails, IDs de leads ou conteúdo de conversas.
+- A chamada é sob demanda e pode gerar custos no provedor escolhido.
+- Há intervalo mínimo de 1 minuto entre gerações.
+
+Homologue com dados de teste antes de usar o parecer como base de decisão comercial.

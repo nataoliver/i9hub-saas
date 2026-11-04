@@ -1,0 +1,18 @@
+i9Hub v1.2.8 — Instalação para homologação
+
+1. Faça backup da pasta da versão anterior.
+2. Extraia i9Hub-v1.2.8.zip em uma pasta permanente.
+3. Abra chrome://extensions.
+4. Ative o Modo do desenvolvedor.
+5. Se já usa a pasta antiga, atualize o caminho da extensão ou carregue a nova pasta em homologação.
+6. Clique em Recarregar.
+7. Atualize as abas do WhatsApp Web e do painel i9Hub.
+8. Confirme que a licença inclui crm.followup.manage, crm.followup.send e, para sequências, crm.followup.automation.
+
+Atenção:
+- Não remova a pasta da extensão enquanto ela estiver carregada.
+- O agendamento é local ao perfil do Chrome.
+- O Chrome e o WhatsApp Web precisam estar conectados no horário para o envio automático.
+- Itens vencidos durante indisponibilidade exigem ação manual.
+- Teste apenas com contatos que autorizaram o recebimento.
+- O painel administrativo não foi atualizado nesta fase.

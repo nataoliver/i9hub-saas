@@ -1,0 +1,22 @@
+i9Hub — build corrigida 1.0.9.1
+Inteligência Comercial do Lead
+
+ATUALIZAÇÃO SEM PERDER OS DADOS LOCAIS
+1. Faça uma cópia de segurança da pasta atual da extensão.
+2. Extraia este ZIP.
+3. Copie o conteúdo da pasta i9Hub-v1.0.9 para a pasta atual da extensão, substituindo os arquivos antigos.
+4. Abra chrome://extensions/ e clique em Recarregar no i9Hub.
+5. Atualize a aba do WhatsApp Web com F5.
+6. Abra Chat com IA e confirme que a planilha do Google Sheets está conectada.
+7. Clique em “Sincronizar pendentes” para sincronizar as fichas comerciais existentes.
+8. Abra o CRM e clique em “Ver” em um lead que já tenha recebido mensagens da IA. A seção “Inteligência Comercial do Lead” mostrará as informações extraídas.
+
+A planilha conectada terá duas abas:
+- Mensagens: histórico original de eventos e respostas.
+- Leads: uma linha por lead, atualizada pelo ID estável do CRM.
+
+IMPORTANTE
+- Não desinstale a extensão para fazer a atualização. O manifesto mantém a mesma chave pública para preservar o ID da extensão e seus dados locais.
+- A aba Leads é criada automaticamente quando a planilha é conectada/sincronizada.
+- Se a conta Google pedir autorização para Google Sheets, autorize o acesso e tente sincronizar novamente.
+- A validação automatizada passou, mas a integração precisa ser confirmada no navegador com sua conta Google e seu WhatsApp Web.

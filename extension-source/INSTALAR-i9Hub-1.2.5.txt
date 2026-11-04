@@ -1,0 +1,25 @@
+i9Hub v1.2.5 — Fase 02: Identidade e dados do lead
+
+ATUALIZAÇÃO SEGURA
+1. Abra Configurações > Dados > Exportar Backup no i9Hub atual.
+2. Extraia i9Hub-v1.2.5.zip para uma pasta temporária.
+3. Abra chrome://extensions e ative o Modo do desenvolvedor.
+4. Substitua os arquivos na mesma pasta da extensão existente e clique em Recarregar.
+5. Não clique em Remover e não desinstale a extensão; isso pode apagar dados locais.
+6. Atualize a aba do WhatsApp Web e abra o painel lateral do i9Hub.
+
+NOVIDADES
+- Melhor identificação de nomes do WhatsApp e Google Maps.
+- Origem e confiabilidade registradas por campo.
+- Editor de nome, telefone, e-mail, empresa, categoria, endereço e site no card do CRM.
+- Correções manuais protegidas contra sobrescrita por sincronizações.
+- Deduplicação por identificadores fortes e combinações seguras.
+
+HOMOLOGAÇÃO
+Consulte GUIA_TESTE_v1.2.5.md para validar Maps, WhatsApp, edição manual e deduplicação.
+
+LICENCIAMENTO
+A edição manual exige crm.lead.identity_edit + crm.leads. O painel administrativo ainda será atualizado para emitir o novo entitlement aos planos comerciais. Para homologação imediata, utilize admin.full_access ou token de teste com os dois direitos.
+
+IMPORTANTE
+A suíte automatizada passou, mas a validação final ainda depende de testes manuais com Chrome, WhatsApp Web e Google Maps reais.

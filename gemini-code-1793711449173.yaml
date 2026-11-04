@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: i9hub_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-i9hub}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-i9hub_secret_2026}
+      POSTGRES_DB: ${POSTGRES_DB:-i9hub_saas}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-i9hub} -d ${POSTGRES_DB:-i9hub_saas}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: i9hub_redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redisdata:/data
+
+  evolution-api:
+    image: atendai/evolution-api:v2.1.1
+    container_name: i9hub_evolution_wa
+    restart: unless-stopped
+    environment:
+      SERVER_URL: ${WA_GATEWAY_PUBLIC_URL:-http://localhost:8080}
+      AUTHENTICATION_API_KEY: ${WA_GATEWAY_API_KEY:-i9hub_wa_master_key}
+      DATABASE_ENABLED: "false"
+      CACHE_REDIS_ENABLED: "true"
+      CACHE_REDIS_URI: redis://redis:6379/1
+      WEBHOOK_GLOBAL_ENABLED: "true"
+      WEBHOOK_GLOBAL_URL: http://i9hub-app:3000/api/webhooks/whatsapp
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
+
+  i9hub-app:
+    build: .
+    container_name: i9hub_saas_app
+    restart: unless-stopped
+    environment:
+      PORT: 3000
+      DATABASE_URL: postgresql://${POSTGRES_USER:-i9hub}:${POSTGRES_PASSWORD:-i9hub_secret_2026}@postgres:5432/${POSTGRES_DB:-i9hub_saas}
+      REDIS_URL: redis://redis:6379/0
+      JWT_SECRET: ${JWT_SECRET:-i9hub_super_secret_jwt_key_change_in_production_2026}
+      ENCRYPTION_MASTER_KEY: ${ENCRYPTION_MASTER_KEY:-0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef}
+      WA_GATEWAY_URL: http://evolution-api:8080
+      WA_GATEWAY_API_KEY: ${WA_GATEWAY_API_KEY:-i9hub_wa_master_key}
+    ports:
+      - "3000:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+volumes:
+  pgdata:
+  redisdata:

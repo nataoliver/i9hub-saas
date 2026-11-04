@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "i9Hub — CRM com Comunicação Consciente",
+    "description": "Nome da extensão i9Hub v1.0.0"
+  },
+  "extDescription": {
+    "message": "CRM inteligente para WhatsApp com gestão de leads, conformidade Meta, IA supervisionada e proteção da conta.",
+    "description": "Descrição da extensão i9Hub v1.0.0"
+  }
+}

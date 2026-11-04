@@ -1,0 +1,22 @@
+i9Hub 1.1.2 — Central de Execução visual
+
+ATUALIZAÇÃO PRESERVANDO OS DADOS LOCAIS
+1. Faça uma cópia da pasta atual da extensão.
+2. Extraia i9Hub-v1.1.2.zip para uma pasta nova.
+3. Abra chrome://extensions e localize o i9Hub.
+4. Se for atualizar a pasta existente, substitua os arquivos pela nova versão preservando o perfil da extensão. Se carregar uma pasta nova, use “Carregar sem compactação” e selecione a pasta que contém manifest.json.
+5. Clique em Recarregar na extensão.
+6. Atualize a aba do WhatsApp Web com F5 e abra o painel lateral do i9Hub.
+7. Acesse o novo menu “Execução” para ver campanhas, lotes, conexão do WhatsApp e estado da IA.
+
+NOVIDADES
+- Central de Execução com atualização automática a cada 5 segundos.
+- Resumo visual no Dashboard.
+- Monitoramento do estado da IA, conexão WhatsApp, lotes de campanha e filas de histórico/CRM.
+- Botões de pausar, retomar e encerrar campanhas na central.
+
+IMPORTANTE
+- Não desinstale a extensão para atualizar: a desinstalação pode apagar dados locais.
+- A IA depende de chave/modelo testados, licença compatível, WhatsApp Web conectado e painel lateral aberto.
+- Se o Chrome ou o WhatsApp Web desconectar, o painel mostrará a falha quando o estado puder ser consultado; retome campanhas somente depois de confirmar a conexão.
+- Os indicadores refletem os dados disponibilizados pela extensão e não substituem teste real no navegador.

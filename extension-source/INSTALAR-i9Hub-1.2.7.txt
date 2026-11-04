@@ -1,0 +1,18 @@
+INSTALAÇÃO — i9Hub v1.2.7
+
+1. Faça backup da extensão anterior.
+2. Extraia o arquivo i9Hub-v1.2.7.zip para uma pasta.
+3. Abra chrome://extensions no Chrome.
+4. Ative o Modo do desenvolvedor.
+5. Se estiver substituindo uma pasta antiga, atualize o caminho ou use Carregar sem compactação para a pasta extraída.
+6. Atualize o WhatsApp Web com F5 e abra o painel lateral do i9Hub.
+7. Confirme a licença e as permissões dos módulos.
+
+IA OBSERVADORA
+- Configure o provedor e teste a chave.
+- Selecione uma personalidade Comercial ou Networking.
+- Em Modo de operação da IA, selecione Somente observação.
+- Salve e ative.
+- A licença deve conter ai.mode.observe_only, além de whatsapp.ai_support e crm.leads.
+
+Atenção: o painel lateral, o Chrome e o WhatsApp Web precisam permanecer abertos/conectados para que as mensagens sejam analisadas.

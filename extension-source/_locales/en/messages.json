@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "i9Hub — CRM & Sales Automation",
+    "description": "i9Hub extension name"
+  },
+  "extDescription": {
+    "message": "Organize leads, track opportunities, automate tasks, and monitor sales performance.",
+    "description": "i9Hub extension description"
+  }
+}

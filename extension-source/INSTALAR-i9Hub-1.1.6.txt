@@ -1,0 +1,24 @@
+i9Hub 1.1.6 — Fase 4: Inteligência de nichos e otimização comercial
+
+ATUALIZAÇÃO SEGURA
+1. Faça um backup dos dados pelo menu Configurações > Dados > Exportar Backup e confirme que o backup do Google Drive está atualizado.
+2. Extraia i9Hub-v1.1.6.zip para uma pasta temporária.
+3. Abra chrome://extensions.
+4. Ative o Modo do desenvolvedor.
+5. Na extensão i9Hub atual, use o botão Recarregar se a instalação já aponta para a mesma pasta de arquivos. Se for atualizar a partir de um ZIP em outra pasta, copie os arquivos extraídos para a pasta atual da extensão, substituindo os arquivos antigos, e clique em Recarregar.
+6. Não use Remover para atualizar, pois isso pode apagar dados locais associados à instalação.
+7. Recarregue a aba do WhatsApp Web e abra o painel do i9Hub.
+
+COMO TESTAR A FASE 4
+1. Abra CRM.
+2. Clique em Inteligência comercial.
+3. Confira campanhas analisadas, envios, respostas, taxa de resposta e taxa de qualificação.
+4. Revise as recomendações e use Preparar público para abrir o formulário de campanha com contatos do nicho selecionado.
+5. Confira a seção Consolidação assistida de subnichos. Revise o nome de origem e o destino antes de confirmar.
+6. Após consolidar, confira no CRM se os leads permanecem e se os subnichos foram atualizados.
+
+IMPORTANTE
+- As recomendações usam os dados históricos sincronizados da própria conta e não garantem resultados futuros.
+- Sincronize conversas antes de interpretar ausência de resposta.
+- A consolidação é manual e exige confirmação; não é executada automaticamente.
+- Recursos de campanhas e relatórios dependem das permissões da licença e de dados disponíveis.

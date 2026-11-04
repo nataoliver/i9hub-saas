@@ -1,0 +1,11 @@
+i9Hub 1.1.9 — Gerenciador de personalidades da IA
+
+1. Faça backup dos dados atuais em Configurações → Dados → Exportar Backup.
+2. Extraia i9Hub-v1.1.9.zip para uma pasta.
+3. Abra chrome://extensions e ative o modo do desenvolvedor.
+4. Se já houver uma instalação carregada, selecione a pasta extraída atualizada e use “Recarregar”. Para uma instalação nova, clique em “Carregar sem compactação” e selecione a pasta que contém manifest.json.
+5. Abra o WhatsApp Web e o painel do i9Hub.
+6. Em Chat com IA, confira o perfil “Atendimento atual” e salve as configurações para concluir a migração.
+7. Crie perfis de Networking, Autoconhecimento ou Prospecção comercial, revise os prompts e salve antes de ativar o atendimento.
+
+Importante: nesta versão, a personalidade escolhida é global para todas as conversas autorizadas. Faça primeiro um teste com poucos contatos que autorizaram a comunicação. O provedor, o modelo e as chaves API são compartilhados pelos perfis.

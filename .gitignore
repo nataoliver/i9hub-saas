@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Environment files (NUNCA subir secrets)
+.env
+.env.local
+.env.production
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build artifacts
+dist/
+build/
+coverage/
+
+# Docker volumes (dados persistentes locais)
+data/
+pgdata/
+redis-data/
+
+# Misc
+*.pid
+*.seed
+*.pid.lock

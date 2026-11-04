@@ -1,0 +1,18 @@
+i9Hub 1.1.0 — Taxonomia dinâmica e funil CRM configurável
+
+ATUALIZAÇÃO PRESERVANDO OS DADOS LOCAIS
+1. Faça uma cópia da pasta atual da extensão.
+2. Extraia o arquivo i9Hub-v1.1.0.zip.
+3. Abra chrome://extensions/ e localize o i9Hub.
+4. Clique em Recarregar. Se for instalar em uma nova pasta, use “Carregar sem compactação” e selecione a pasta que contém manifest.json.
+5. Atualize a aba do WhatsApp Web com F5 e abra o painel lateral do i9Hub.
+6. Abra Configurações > Dados e confirme que o Google Drive está conectado. Clique em “Sincronizar agora” para transferir os novos dados do funil e da taxonomia entre computadores.
+7. No CRM, use “Gerenciar etapas” para personalizar o funil e “Nichos e etiquetas inteligentes” para revisar a árvore de classificações.
+8. Teste com uma conversa autorizada e confira no card do lead as informações comerciais, nichos, subnichos e etiquetas identificados pela IA.
+
+IMPORTANTE
+- Não desinstale a extensão para atualizar. Recarregar a extensão preserva os dados locais; desinstalar pode apagá-los.
+- O backup de nichos e etapas passa a ser enviado ao Drive quando a sincronização está conectada e ativa. Faça uma sincronização manual após a primeira atualização.
+- As classificações automáticas dependem da resposta estruturada do provedor de IA, da configuração do Chat com IA e da licença que libera os recursos do CRM.
+- Se uma etapa personalizada contiver leads, escolha uma etapa de destino antes de removê-la.
+- A validação automatizada passou, mas a operação real precisa ser confirmada no Chrome com sua conta e permissões do Google.

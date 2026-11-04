@@ -1,0 +1,33 @@
+i9Hub v1.8.0 — Fase 12: Sincronização Comercial entre Dispositivos
+
+ATUALIZAÇÃO SEGURA
+1. Abra Configurações > Dados > Exportar Backup e confirme que o backup foi concluído.
+2. Extraia i9Hub-v1.8.0.zip para uma pasta temporária.
+3. Abra chrome://extensions e ative o Modo do desenvolvedor.
+4. Copie os arquivos extraídos para a mesma pasta da extensão atual, substituindo os arquivos antigos.
+5. Clique em Recarregar na extensão i9Hub.
+6. NÃO remova nem desinstale a extensão antiga. Preserve a mesma identidade/ID para manter os dados locais.
+7. Confira se a versão exibida é 1.8.0.
+
+NOVIDADES DA FASE 12
+- Sincronização de vendedores, equipes, produtos/serviços e metas mensais.
+- Sincronização das probabilidades das etapas comerciais.
+- Mesclagem por ID e data da última alteração.
+- Histórico de equipes preservado.
+- Arquivo comercial separado no Google Drive para compatibilidade com versões anteriores.
+- Instantâneos diários do arquivo comercial, com retenção de sete dias.
+- Proteção contra limpeza física acidental dos cadastros comerciais.
+
+COMO USAR EM MAIS DE UM COMPUTADOR
+1. Em cada computador, conecte o Google Drive usando a MESMA conta Google.
+2. Mantenha a sincronização automática ativada em Configurações > Dados.
+3. Faça a primeira sincronização manual em cada computador.
+4. Cadastros e metas comerciais serão mesclados automaticamente após alterações.
+5. Para conferir o estado, veja os totais locais e no Drive em Configurações > Dados.
+
+IMPORTANTE
+- A Fase 12 usa a permissão já existente drive.sync; não exige novo entitlement.
+- A sincronização entre dispositivos depende da mesma conta Google Drive.
+- Não escolha Restaurar ou Sobrescrever sem conferir a mensagem de confirmação.
+- A Fase 12 sincroniza os cadastros comerciais entre dispositivos; não cria ainda uma tela consolidada no painel administrativo.
+- Faça a homologação com dados fictícios antes de utilizar os indicadores em decisões financeiras.

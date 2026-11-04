@@ -1,0 +1,27 @@
+i9Hub 1.1.7 — Controle de respostas da IA em grupos
+
+ATUALIZAÇÃO SEGURA
+1. Faça backup pelo menu Configurações > Dados > Exportar Backup e confirme que o backup do Google Drive está atualizado.
+2. Extraia i9Hub-v1.1.7.zip para uma pasta temporária.
+3. Abra chrome://extensions e ative o Modo do desenvolvedor.
+4. Se a extensão aponta para a pasta de instalação atual, copie os arquivos extraídos para essa pasta, substituindo os arquivos antigos. Não apague dados de perfil nem desinstale a extensão.
+5. Clique em Recarregar na página de extensões.
+6. Recarregue a aba do WhatsApp Web (F5) e abra o painel do i9Hub.
+
+CONFIGURAR RESPOSTAS EM GRUPOS
+1. Abra Chat com IA > “Onde e quando a IA pode responder”.
+2. Em “Tipo de conversa”, selecione “Somente grupos” ou “Conversas privadas e grupos”.
+3. Em “Quais grupos podem acionar a IA?”, escolha “Somente grupos selecionados”, “Todos os grupos” ou “Todos, exceto os grupos selecionados”.
+4. Selecione “Atualizar grupos”. A lista deve ser obtida do WhatsApp Web conectado.
+5. Marque os grupos desejados. Você pode pesquisar, marcar os resultados visíveis ou limpar a seleção.
+6. Escolha o gatilho: menção, resposta à própria IA, menção OU resposta, todas as mensagens ou palavras-chave.
+7. Se escolher palavras-chave, informe uma ou mais expressões.
+8. Clique em “Salvar regras de grupos”.
+9. Teste primeiro em um grupo autorizado e confirme o resultado no menu Execução.
+
+IMPORTANTE
+- No modo “Somente grupos selecionados”, nenhum grupo é autorizado até que pelo menos um esteja marcado.
+- “Todas as mensagens” pode gerar muitas respostas. Comece com menção ou resposta à IA.
+- A extensão precisa do WhatsApp Web conectado e do painel da IA aberto.
+- A automação utiliza a interface do WhatsApp Web e pode ser afetada por alterações nessa interface.
+- O teste automatizado passou, mas a lista de grupos e os gatilhos devem ser validados manualmente no seu navegador.

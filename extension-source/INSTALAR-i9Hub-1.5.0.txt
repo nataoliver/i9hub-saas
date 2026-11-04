@@ -1,0 +1,16 @@
+i9Hub v1.5.0 — instalação para homologação da Fase 09
+
+1. Faça backup da extensão atual.
+2. Extraia i9Hub-v1.5.0.zip em uma pasta nova.
+3. Abra chrome://extensions.
+4. Ative Modo do desenvolvedor.
+5. Clique em Carregar sem compactação e selecione a pasta extraída que contém manifest.json.
+6. Ative uma licença com dashboard.commercial_performance, crm.leads e crm.kanban.
+7. Abra o CRM e preencha responsável, valor estimado e valor efetivamente vendido em leads de teste.
+8. Registre resultados de reuniões depois do horário final dos compromissos.
+9. Abra Dashboard → Relatórios e inteligência de performance.
+10. Confira períodos, probabilidades, conversão, receita, comparecimento e tempo de fechamento.
+
+A atribuição por vendedor começa na data em que o responsável é salvo; não é retroativa.
+A previsão ponderada usa valor estimado e probabilidades por etapa; não é receita realizada.
+Mantenha a instalação anterior até concluir a homologação.

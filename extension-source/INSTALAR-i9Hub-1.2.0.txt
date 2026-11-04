@@ -1,0 +1,13 @@
+i9Hub 1.2.0 — Fase 3: Personalidades por grupo e campanha
+
+1. Faça um backup em Configurações → Dados → Exportar Backup.
+2. Extraia o arquivo i9Hub-v1.2.0.zip para uma pasta.
+3. Abra chrome://extensions e mantenha o modo do desenvolvedor ativado.
+4. Se já utiliza o i9Hub, substitua os arquivos da pasta da extensão pela nova versão e clique em Recarregar. Não remova a extensão, para preservar os dados locais.
+5. Abra o WhatsApp Web e o painel do i9Hub.
+6. Em Chat com IA, atualize os grupos e selecione uma personalidade específica para cada grupo autorizado, se desejar.
+7. Ao criar uma campanha, escolha a personalidade que deverá responder aos contatos que receberem aquela campanha. Se deixar o campo no perfil global, será usada a personalidade ativa geral.
+8. Salve as configurações da IA e sincronize pelo Google Drive, se usar mais de um computador.
+9. Faça primeiro um teste com poucos contatos que autorizaram a comunicação.
+
+Comportamento: a personalidade do grupo tem prioridade dentro daquele grupo. Para conversas privadas, o perfil da campanha vale por até 30 dias após o envio confirmado. Sem atribuição específica válida, o i9Hub usa o perfil global. A escolha de personalidade não ativa a IA se ela estiver pausada.

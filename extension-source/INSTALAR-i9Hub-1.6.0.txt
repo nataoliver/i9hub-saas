@@ -1,0 +1,24 @@
+i9Hub v1.6.0 — atualização e homologação da Fase 10
+
+ATENÇÃO: preserve o mesmo ID da extensão para manter os dados locais do CRM.
+
+1. Faça uma cópia de segurança da pasta atual da extensão.
+2. Extraia i9Hub-v1.6.0.zip em uma pasta temporária.
+3. Copie o conteúdo extraído para a pasta que já está carregada no Chrome, substituindo os arquivos antigos.
+4. NÃO remova a extensão pelo chrome://extensions. O manifesto mantém a mesma chave/ID da versão anterior.
+5. Abra chrome://extensions e clique em Recarregar na extensão i9Hub.
+6. Confira se a versão exibida é 1.6.0.
+7. Abra Dashboard → Gestão de metas, equipes e comissões.
+8. Cadastre equipes, vendedores, produtos/serviços e metas mensais.
+9. Vincule vendedor e produto/serviço aos leads de teste.
+10. Registre o valor efetivamente vendido e feche o lead como ganho.
+11. Confira ranking, metas, alertas e comissões.
+12. Marque uma comissão como paga e valide as proteções de edição.
+
+Licenciamento:
+- Use dashboard.commercial_performance, crm.leads e crm.kanban.
+- O painel administrativo não foi alterado nesta fase.
+- O ID dashboard.commercial_management já consta no catálogo v11, mas as ações usam os direitos da Fase 09 para manter compatibilidade.
+
+Comissões são controles internos; a extensão não realiza transferências bancárias nem processa folha de pagamento.
+Faça a homologação com leads de teste antes de utilizar os indicadores para decisões financeiras.

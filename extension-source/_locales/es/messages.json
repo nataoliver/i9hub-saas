@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "i9Hub — CRM y Automatización Comercial",
+    "description": "Nombre de la extensión i9Hub"
+  },
+  "extDescription": {
+    "message": "Organiza prospectos, sigue oportunidades, automatiza tareas y acompaña los resultados comerciales.",
+    "description": "Descripción de la extensión i9Hub"
+  }
+}

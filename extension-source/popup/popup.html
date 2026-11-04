@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i9Leads Flow</title>
+  <style>
+    :root { --primary:#1976d2; --primary-h:#1565c0; --danger:#d32f2f; --ok:#2e7d32; --wa:#25d366; --wa-h:#1ebe5b; --bg:#f8f9fa; --card:#fff; --text:#212529; --muted:#6c757d; --border:#dee2e6; }
+    * { box-sizing:border-box; margin:0; padding:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; }
+    body { width:330px; padding:16px; background:var(--bg); color:var(--text); font-size:13px; }
+    header { display:flex; align-items:center; gap:8px; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+    header img { width:24px; height:24px; }
+    header h1 { font-size:15px; color:#0d47a1; }
+    .ver { margin-left:auto; font-size:11px; font-weight:600; color:var(--muted); background:#eceff1; padding:2px 8px; border-radius:10px; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:6px; padding:12px; margin-bottom:12px; }
+    .row { display:flex; justify-content:space-between; margin-bottom:6px; }
+    .row:last-child { margin-bottom:0; }
+    .muted { color:var(--muted); }
+    .badge { font-weight:600; padding:2px 8px; border-radius:4px; font-size:11px; }
+    .b-ok { background:#e8f5e9; color:var(--ok); } .b-free { background:#fff8e1; color:#f57f17; } .b-lim { background:#ffebee; color:var(--danger); }
+    #status-card p { line-height:1.5; color:var(--muted); }
+    input { width:100%; padding:8px 10px; border:1px solid var(--border); border-radius:4px; font-size:13px; margin:6px 0 10px; }
+    .btn { display:block; width:100%; padding:9px 12px; border:none; border-radius:4px; font-size:13px; font-weight:600; cursor:pointer; margin-bottom:8px; text-align:center; text-decoration:none; }
+    .btn:last-child { margin-bottom:0; }
+    .btn-primary { background:var(--primary); color:#fff; } .btn-primary:hover { background:var(--primary-h); }
+    .btn-wa { background:var(--wa); color:#fff; } .btn-wa:hover { background:var(--wa-h); }
+    .btn-sec { background:#e0e0e0; color:var(--text); }
+    .btn-danger { background:var(--danger); color:#fff; }
+    .btn:disabled { opacity:.6; cursor:not-allowed; }
+    #msg { min-height:16px; text-align:center; font-size:12px; margin-top:6px; }
+    .err { color:var(--danger); } .ok { color:var(--ok); }
+    [hidden] { display:none !important; }
+  </style>
+</head>
+<body>
+  <header><img src="../icons/icon-32.png" alt=""><h1>i9Leads Flow</h1><span class="ver" id="ver">v5.4.0</span></header>
+
+  <div class="card" id="status-card"><span class="muted">Carregando...</span></div>
+
+  <button id="open-panel" class="btn btn-primary">Abrir em tela inteira</button>
+
+  <div id="license-block" hidden>
+    <a id="wa-btn" class="btn btn-wa" target="_blank" rel="noopener noreferrer">Quero minha conta grátis pelo WhatsApp</a>
+    <form id="activate-form" class="card">
+      <label class="muted" for="key">Já recebeu a chave de licença gerada pelo painel?</label>
+      <input id="key" type="text" placeholder="XXXX-XXXX-XXXX-XXXX" autocomplete="off" required>
+      <button type="submit" id="activate" class="btn btn-primary">Ativar minha conta</button>
+    </form>
+  </div>
+
+  <div id="licensed-block" hidden>
+    <a id="licensed-support" class="btn btn-wa" target="_blank" rel="noopener noreferrer">Falar com suporte / planos</a>
+    <button id="deactivate" class="btn btn-danger">Desativar licença neste dispositivo</button>
+  </div>
+
+  <p id="msg"></p>
+  <p class="credit" style="margin-top:10px;text-align:center;font-size:11px;color:#6c757d">Desenvolvido por <strong>Natã Oliver</strong> · <a href="https://i9ads.com.br/?utm_source=i9leads_flow&amp;utm_medium=extensao_chrome&amp;utm_campaign=origem_extensao&amp;utm_content=popup" target="_blank" rel="noopener noreferrer" style="color:#1976d2;font-weight:600;text-decoration:none">i9ads.com.br</a></p>
+<script type="module" src="./popup.js"></script>
+</body>
+</html>

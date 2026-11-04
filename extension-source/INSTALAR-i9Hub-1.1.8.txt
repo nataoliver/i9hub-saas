@@ -1,0 +1,22 @@
+i9Hub 1.1.8 — Persistência segura das configurações da IA
+
+ATUALIZAÇÃO SEGURA
+1. Faça backup em Configurações > Dados > Exportar Backup e confirme que o backup do Google Drive está atualizado.
+2. Extraia i9Hub-v1.1.8.zip para uma pasta temporária.
+3. Abra chrome://extensions e ative o Modo do desenvolvedor.
+4. Copie os arquivos extraídos para a pasta da instalação atual, substituindo os arquivos antigos. Não desinstale a extensão e não apague os dados do perfil do Chrome.
+5. Clique em Recarregar na página de extensões.
+6. Recarregue a aba do WhatsApp Web (F5) e abra o painel do i9Hub.
+
+CONFIGURAÇÕES DA IA
+1. Abra Chat com IA.
+2. Edite as instruções, o contexto, a mensagem inicial, os critérios ou as regras de grupos.
+3. Confira o indicador de alterações não salvas e clique em Salvar configurações.
+4. Se o Google Drive estiver conectado, aguarde a confirmação de sincronização. Se não estiver, a configuração permanece salva localmente e pode ser sincronizada após conectar o Drive.
+5. Ao conectar ou sincronizar o histórico, a extensão salva qualquer rascunho pendente antes da operação e preserva os campos de configuração.
+6. Para usar as configurações em outro computador, conecte o Google Drive. Se quiser restaurar as chaves de API, informe a mesma senha de sincronização de pelo menos 10 caracteres. A senha não é enviada ao Drive.
+
+IMPORTANTE
+- A sincronização de configurações não ativa automaticamente o atendimento em um computador novo; teste o provedor e ative a IA localmente.
+- A automação depende do WhatsApp Web conectado e do painel aberto, e pode ser afetada por alterações na interface do WhatsApp.
+- Validação automatizada da versão: `npm run validate`.
