@@ -2,18 +2,37 @@
 # Stack: PostgreSQL 16 (RLS), Redis 7, Evolution API, 9Router, i9Hub App
 
 services:
-  # ─── Reverse Proxy (Caddy com TLS automático) ───
-  caddy:
-    image: caddy:2-alpine
-    container_name: i9hub_caddy
+  # ─── Reverse Proxy (Traefik com TLS automático) ───
+  traefik:
+    image: traefik:v3.1
+    container_name: i9hub_traefik
     restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik.rule=Host(`traefik.i9ads.com.br`)"
+      - "traefik.http.routers.traefik.entrypoints=websecure"
+      - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.traefik.service=api@internal"
+      - "traefik.http.routers.traefik.middlewares=auth-traefik"
+      - "traefik.http.middlewares.auth-traefik.basicauth.users=${TRAEFIK_DASHBOARD_AUTH:-admin:$$apr1$$H6uskkkW$$IgXLP6ewTrSuBkVuq8y7s.}"
+    command:
+      - "--api.dashboard=true"
+      - "--api.insecure=false"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.letsencrypt.acme.tlschallenge=true"
+      - "--certificatesresolvers.letsencrypt.acme.email=${ACME_EMAIL:-admin@i9ads.com.br}"
+      - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
     ports:
       - "80:80"
       - "443:443"
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy_data:/data
-      - caddy_config:/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - traefik_certs:/letsencrypt
     depends_on:
       - i9hub-app
     deploy:
@@ -71,6 +90,12 @@ services:
     image: atendai/evolution-api:latest
     container_name: i9hub_evolution_wa
     restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.evolution.rule=Host(`wa.i9ads.com.br`)"
+      - "traefik.http.routers.evolution.entrypoints=websecure"
+      - "traefik.http.routers.evolution.tls.certresolver=letsencrypt"
+      - "traefik.http.services.evolution.loadbalancer.server.port=8080"
     environment:
       SERVER_URL: ${WA_GATEWAY_PUBLIC_URL:-http://localhost:8080}
       AUTHENTICATION_API_KEY: ${WA_GATEWAY_API_KEY:-i9hub_wa_master_key}
@@ -95,6 +120,12 @@ services:
     image: 9router/9router:latest
     container_name: i9hub_9router
     restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.router.rule=Host(`router.i9ads.com.br`)"
+      - "traefik.http.routers.router.entrypoints=websecure"
+      - "traefik.http.routers.router.tls.certresolver=letsencrypt"
+      - "traefik.http.services.router.loadbalancer.server.port=8080"
     environment:
       POOL_SIZE: "8"
       ROTATION_STRATEGY: "round_robin"
@@ -115,6 +146,12 @@ services:
       dockerfile: Dockerfile
     container_name: i9hub_saas_app
     restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.i9hub.rule=Host(`app.i9ads.com.br`)"
+      - "traefik.http.routers.i9hub.entrypoints=websecure"
+      - "traefik.http.routers.i9hub.tls.certresolver=letsencrypt"
+      - "traefik.http.services.i9hub.loadbalancer.server.port=3000"
     environment:
       NODE_ENV: production
       PORT: 3000
@@ -182,10 +219,14 @@ services:
     image: louislam/uptime-kuma:1
     container_name: i9hub_monitor
     restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.kuma.rule=Host(`status.i9ads.com.br`)"
+      - "traefik.http.routers.kuma.entrypoints=websecure"
+      - "traefik.http.routers.kuma.tls.certresolver=letsencrypt"
+      - "traefik.http.services.kuma.loadbalancer.server.port=3001"
     volumes:
       - kuma_data:/app/data
-    ports:
-      - "3001:3001"
     deploy:
       resources:
         limits:
@@ -195,8 +236,7 @@ services:
 volumes:
   pgdata:
   redisdata:
-  caddy_data:
-  caddy_config:
+  traefik_certs:
   kuma_data:
 
 networks:

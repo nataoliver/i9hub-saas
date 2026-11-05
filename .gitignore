@@ -36,3 +36,14 @@ redis-data/
 *.pid
 *.seed
 *.pid.lock
+
+# AI-generated temporary files
+gemini-code-*
+
+# Legacy archives
+*.zip
+*.tar.gz
+*.7z
+
+# Caddy (replaced by Traefik)
+Caddyfile
