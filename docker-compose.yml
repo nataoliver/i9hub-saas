@@ -87,7 +87,7 @@ services:
 
   # ─── Gateway WhatsApp Principal (Planos Pro/Enterprise) ───
   evolution-api:
-    image: atendai/evolution-api:latest
+ image: evoapicloud/evolution-api:latest
     container_name: i9hub_evolution_wa
     restart: unless-stopped
     labels:
