@@ -1,4 +1,4 @@
-// backend/src/config/db.js
+﻿// backend/src/config/db.js
 import pg from 'pg';
 const { Pool } = pg;
 
@@ -14,9 +14,6 @@ pool.on('error', (err) => {
   console.error('[PG] Unexpected pool error:', err.message);
 });
 
-/**
- * Executa uma transação com SET LOCAL app.current_tenant para RLS
- */
 export async function withTenantTransaction(tenantId, fn) {
   const client = await pool.connect();
   try {
@@ -33,18 +30,60 @@ export async function withTenantTransaction(tenantId, fn) {
   }
 }
 
-/**
- * Seed inicial: cria tenant demo e usuário admin se não existirem
- */
 export async function seedInitialTenants() {
   const bcrypt = await import('bcryptjs');
-  const { rows } = await pool.query(`SELECT id FROM tenants WHERE slug = 'demo' LIMIT 1`);
+
+  // Verificar se superadmin ja existe
+  const { rows: existingAdmin } = await pool.query(
+    "SELECT id FROM users WHERE email = 'contato@i9ads.com.br' LIMIT 1"
+  );
+
+  if (existingAdmin.length === 0) {
+    console.log('[Seed] Criando tenant i9Ads e superadmin contato@i9ads.com.br...');
+    const client = await pool.connect();
+    try {
+      await client.query('BEGIN');
+
+      // Tenant i9Ads (administrativo)
+      const i9adsRes = await client.query(
+        `INSERT INTO tenants (name, slug, plan, entitlements, active)
+         VALUES ($1, $2, $3, $4::jsonb, true)
+         ON CONFLICT (slug) DO UPDATE SET entitlements = EXCLUDED.entitlements
+         RETURNING id`,
+        ['i9Ads', 'i9ads', 'enterprise', '["*","admin.full_access"]']
+      );
+      const i9adsTenantId = i9adsRes.rows[0].id;
+
+      const superHash = await bcrypt.default.hash(
+        process.env.SUPERADMIN_PASSWORD || 'I9Ads@2026!Xyz', 12
+      );
+      await client.query(
+        `INSERT INTO users (tenant_id, name, email, password_hash, role)
+         VALUES ($1, $2, $3, $4, $5)
+         ON CONFLICT (tenant_id, email) DO NOTHING`,
+        [i9adsTenantId, 'Super Admin i9Ads', 'contato@i9ads.com.br', superHash, 'superadmin']
+      );
+
+      await client.query('COMMIT');
+      console.log('[Seed] Superadmin criado: contato@i9ads.com.br');
+    } catch (err) {
+      await client.query('ROLLBACK').catch(() => {});
+      console.error('[Seed] Erro ao criar superadmin:', err.message);
+    } finally {
+      client.release();
+    }
+  } else {
+    console.log('[Seed] Superadmin contato@i9ads.com.br ja existe.');
+  }
+
+  // Seed demo tenant
+  const { rows } = await pool.query("SELECT id FROM tenants WHERE slug = 'demo' LIMIT 1");
   if (rows.length > 0) {
-    console.log('[Seed] Tenant demo já existe, pulando seed.');
+    console.log('[Seed] Tenant demo ja existe, pulando.');
     return;
   }
 
-  console.log('[Seed] Criando tenant demo e usuário admin...');
+  console.log('[Seed] Criando tenant demo...');
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
@@ -60,28 +99,11 @@ export async function seedInitialTenants() {
     await client.query(
       `INSERT INTO users (tenant_id, name, email, password_hash, role)
        VALUES ($1, $2, $3, $4, $5)`,
-      [tenantId, 'Administrador', 'admin@demo.com', hash, 'superadmin']
-    );
-
-    // Seed de segundo tenant para testes multi-tenant
-    const tenant2Res = await client.query(
-      `INSERT INTO tenants (name, slug, plan, entitlements)
-       VALUES ($1, $2, $3, $4::jsonb) RETURNING id`,
-      ['Lety Plus', 'lety-plus', 'starter', '["crm.leads","crm.kanban","dashboard.analytics"]']
-    );
-    const tenant2Id = tenant2Res.rows[0].id;
-
-    const hash2 = await bcrypt.default.hash('vendedor123', 12);
-    await client.query(
-      `INSERT INTO users (tenant_id, name, email, password_hash, role)
-       VALUES ($1, $2, $3, $4, $5)`,
-      [tenant2Id, 'Vendedor Lety', 'vendedor@letyplus.com', hash2, 'seller']
+      [tenantId, 'Administrador', 'admin@demo.com', hash, 'owner']
     );
 
     await client.query('COMMIT');
-    console.log('[Seed] Tenants e usuários criados com sucesso.');
-    console.log('[Seed] Login demo: admin@demo.com / admin123');
-    console.log('[Seed] Login lety: vendedor@letyplus.com / vendedor123');
+    console.log('[Seed] Tenant demo criado. Login: admin@demo.com / admin123');
   } catch (err) {
     await client.query('ROLLBACK').catch(() => {});
     throw err;
