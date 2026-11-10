@@ -257,6 +257,7 @@ app.get('/api/health', async (_req, res) => {
 app.use('/lib', express.static(path.join(FRONTEND_DIR, 'sidepanel', 'lib')));
 app.use(express.static(FRONTEND_DIR));
 app.get('/', (_req, res) => res.redirect('/sidepanel/sidepanel.html'));
+app.get('/admin', (_req, res) => res.sendFile(path.join(FRONTEND_DIR, 'admin', 'index.html')));
 
 const PORT = Number(process.env.PORT || 3000);
 async function startServer() {
